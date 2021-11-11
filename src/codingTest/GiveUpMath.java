@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class GiveUpMath {
 
 	public static void main(String[] args) {
+//		수포자 찍기
 		int[] answers = {1,3,2,4,2};
 		int n = answers.length;
 		int[] one = new int[n];

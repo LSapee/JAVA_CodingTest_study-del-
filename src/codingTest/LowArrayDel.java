@@ -34,7 +34,7 @@ public class LowArrayDel {
 			for(int i =0; i<ar.size(); i++) {
 				answer[i] = ar.get(i);
 			}
-//			System.out.println(Arrays.toString(answer));
+			System.out.println(Arrays.toString(answer));
 			
 		}
 	}
