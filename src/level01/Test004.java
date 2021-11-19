@@ -3,7 +3,7 @@ package level01;
 public class Test004 {
 
 	public static void main(String[] args) {
-//		이상한 문자 만들기
+//		이상한 문자 만들기 (통과)
 		String s = " try   hello   world  ";
 //		s =s.trim().replaceAll(" +", " ");
 		String[] a = s.split(" ",-1);

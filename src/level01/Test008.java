@@ -3,7 +3,7 @@ package level01;
 public class Test008 {
 
 	public static void main(String[] args) {
-//		약수의 개수와 덧셈
+//		약수의 개수와 덧셈 (통과)
 		int left = 13;
 		int right = 17;
 		int count =0;

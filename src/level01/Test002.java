@@ -6,7 +6,7 @@ import java.util.Collections;
 public class Test002 {
 
 	public static void main(String[] args) {
-//	문자열 내림차순으로 배치하기
+//	문자열 내림차순으로 배치하기 (통과)
 		String s ="Zbcdefg";
 		String[] ss = s.split("");
 		String answer = "";

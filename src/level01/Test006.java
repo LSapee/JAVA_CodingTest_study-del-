@@ -3,44 +3,47 @@ package level01;
 public class Test006 {
 
 	public static void main(String[] args) {
-//	소수 찾기
-		int n =1000000;
-		int count =0;
-		int answer = 0;
-		for(int i=2; i<=n; i++) {
-			for(int j=1; j<=i; j++) {
-				if(i>10&& i%2 !=0 &&i%3 !=0 &&i%5 != 0&&i%7 !=0) {
-					count++;			
-				}
-				else if(i%j ==0) {
-					count++;
-				}
-				if(count >2) {
-					break;
+		int[] numbers = {1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5};
+		String hand = "right";
+		String a = "";
+		int rnum =0;
+		int lnum = 0;
+		int ln;
+		int rn;
+		if(hand.equals("right")) {
+			for(int i =0; i<numbers.length; i++) {
+				if(numbers[i] == 1||numbers[i] == 4||numbers[i] == 7) {
+					lnum = numbers[i];
+					System.out.print("l");
+				}else if(numbers[i] == 3||numbers[i] == 6||numbers[i] == 9) {
+					rnum = numbers[i];
+					System.out.print("r");
+				}else {
+					ln = numbers[i] - lnum;
+					ln = Math.abs(ln);
+					rn = numbers[i] - rnum;
+					rn = Math.abs(rn);
+					if(ln>rn) {
+						System.out.print("r");
+					}else if(ln<rn) {
+						System.out.print("l");
+					}else {
+						System.out.println("r");
+					}
 				}
 			}
-			if(count ==2) {
-				answer++;
+		}else {
+			for(int i =0; i<numbers.length; i++) {
+				if(numbers[i] == 1||numbers[i] == 4||numbers[i] == 7) {
+					System.out.print("l");
+				}else if(numbers[i] == 3||numbers[i] == 6||numbers[i] == 9) {
+					System.out.print("r");
+				}else {
+					
+				}
 			}
-			
-			count =0;
 		}
-		
-		System.out.println(answer);
-		
-		
-		
-//		int count =0;
-//		for(int i =2; i<=n; i++) {
-//			if(i == 2 ||i ==3 || i==5|| i==7) {
-//				count++;
-//			}
-//			if(i%2 !=0 &&i%3 !=0 &&i%5 != 0&&i%7 !=0) {
-//				count++;			
-//			}
-//			
-//		}
-
+//		끝부분
 	}
 
 }

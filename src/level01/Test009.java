@@ -7,7 +7,7 @@ import java.util.Collections;
 public class Test009 {
 
 	public static void main(String[] args) {
-//	3진법 뒤집기
+//	3진법 뒤집기 (통과)
 		int n = 125;
 		int re =0;
 		String a ="";

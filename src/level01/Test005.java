@@ -3,7 +3,7 @@ package level01;
 public class Test005 {
 
 	public static void main(String[] args) {
-//		서울에서 김서방 찾기
+//		서울에서 김서방 찾기 (통과)
 		String[] seoul = {"Jaane","Kim"};
 		String answer = "";
 		for(int i=0; i<seoul.length; i++) {
