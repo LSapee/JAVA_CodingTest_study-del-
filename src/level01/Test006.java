@@ -3,6 +3,7 @@ package level01;
 public class Test006 {
 
 	public static void main(String[] args) {
+//		½ÃµµÁß
 		int n =1000000;
 		int answer =0;
 		int count = 0;
