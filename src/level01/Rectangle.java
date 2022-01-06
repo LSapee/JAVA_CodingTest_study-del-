@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Rectangle {
 
 	public static void main(String[] args) {
-//		직사각형 찍기 연습문제
+//		직사각형 별찍기
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();

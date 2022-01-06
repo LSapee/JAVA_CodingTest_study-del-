@@ -3,7 +3,7 @@ package level01;
 public class ArrayDeleteLowNumber {
 
 	public static void main(String[] args) {
-		
+//		제일 작은 수 제거하기
 		// 배열에서 가장 작은수 제거하기
 		int[] arr = {4,3,2,1 };
 

@@ -11,7 +11,7 @@ import java.util.Map.Entry;
 public class FailureRate {
 
 	public static void main(String[] args) {
-		
+//		½ÇÆÐÀ²
 		int N = 5;
 		int[] answer = new int[N];
 		int[] stages = {1,1,4,3,2};

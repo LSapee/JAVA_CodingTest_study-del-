@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TwoNumbersSum {
-
+// 2개 뽑아서 더하기
 	public static void main(String[] args) {
 		int[] numbers = {2,1,3,4,1};
 		ArrayList<Integer> al = new ArrayList<>();

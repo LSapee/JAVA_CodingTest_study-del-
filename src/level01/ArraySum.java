@@ -3,7 +3,7 @@ package level01;
 public class ArraySum {
 
 	public static void main(String[] args) {
-//		Çà·ÄÀÇ µ¡¼À ¿¬½À¹®Á¦ 
+//		Çà·ÄÀÇ µ¡¼À
 		
 		int[][] arr1 = {{1,2},{2,3}};
 		int[][] arr2 = {{3,4},{5,6}};

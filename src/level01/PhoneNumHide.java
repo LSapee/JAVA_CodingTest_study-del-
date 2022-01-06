@@ -3,6 +3,7 @@ package level01;
 public class PhoneNumHide {
 
 	public static void main(String[] args) {
+//		핸드폰 번호 가리기
 //전화번호 뒤의 4자리 빼고 나머지 가리기
 		String a = "1234567890";
 		String[] aa = a.split("");
