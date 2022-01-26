@@ -3,7 +3,6 @@ package level01;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashSet;
 
 public class Kakao2022 {
     public static void main(String[] args){
@@ -12,54 +11,39 @@ public class Kakao2022 {
         int k =2;
         int count = 0;
         int[] answer = new int[id_list.length];
-//        중복제거 report
-        HashSet<String> reportMember = new HashSet<>();
-        ArrayList<String> reportMembers = new ArrayList<>();
 
-        for(String item : report){
-            if(!reportMember.contains(item)){
-                reportMember.add(item);
+        //        중복제거 report
+        Arrays.sort(report);
+        ArrayList<String> reportMember = new ArrayList<>(Arrays.asList(report));
+        ArrayList<String> stopMember = new ArrayList<>(Arrays.asList(report));
+
+        for(int i =0; i< reportMember.size()-1; i++){
+            if(reportMember.get(i).equals(reportMember.get(i+1))){
+                reportMember.remove(i);
             }
         }
-        reportMembers.addAll(reportMember);
-        System.out.println(reportMembers);
+        System.out.println(reportMember);
 //      정지당한 아이디 구하기
-        ArrayList<String> reportedaccount = new ArrayList<>();
         for(int i =0; i<id_list.length; i++){
-            for(int j = 0; j< reportMembers.size();j++){
-                if(reportMembers.get(j).contains(" "+id_list[i])){
-                    reportedaccount.add(id_list[i]);
-                }
-            }
-            count = 0;
-        }
-        System.out.println(reportedaccount);
-
-        ArrayList<String> stopaccount = new ArrayList<>();
-        for(int i =0; i<id_list.length; i++){
-            if(Collections.frequency(reportedaccount,id_list[i])==k){
-                stopaccount.add(id_list[i]);
-            }
-        }
-        System.out.println(stopaccount);
-
-        ArrayList<String> stoplist = new ArrayList<>();
-        for(int i =0; i< stopaccount.size(); i++){
-            for(int j = 0; j<reportMembers.size(); j++){
-                if(reportMembers.get(j).contains(" "+stopaccount.get(i))){
-                    stoplist.add(reportMembers.get(j));
+            for(int j = 0; j< reportMember.size(); j++){
+                if(reportMember.get(j).contains(" "+id_list[i])){
+                   reportMember.set(j,reportMember.get(j).replace(id_list[i]+" ",""));
                 }
             }
         }
-        System.out.println(stoplist);
-
-        for(int i =0; i< id_list.length; i++){
-            for(int j=0; j< stoplist.size(); j++){
-                if(stoplist.get(j).contains(id_list[i]+" ")){
-                    answer[i] += 1;
+        System.out.println(reportMember);
+        Collections.sort(reportMember);
+            for(int j = 0; j< reportMember.size()-1; j++){
+                if(reportMember.get(j).equals(reportMember.get(j+1))){
+                    count++;
+                }
+                if(count == k){
+                    stopMember.add(reportMember.get(j));
+                    count =0;
                 }
             }
-        }
+
+        System.out.println(stopMember);
 
         System.out.println(Arrays.toString(answer));
     }
