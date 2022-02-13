@@ -8,12 +8,44 @@ public class Find {
 
         int n = sc.nextInt();
         int k = 0;
-        for(int i =1; i<n; i++){
+        int j = 0;
+        String a = "";
+        for(int i =0; i<=n; i++){
             n -= i;
-            k = i;
+            k++;
+            j=i;
         }
-        System.out.println(k);
-        System.out.println(n);
+
+        if(n==0){
+            j= j+1;
+        }
+
+        if(j%2 ==0){
+            if(n==0){
+                k= k-1;
+                n = n+1;
+                a = n+"/"+k;
+            }
+            else if(n<k){
+                k = k+1-n;
+                a = k+"/"+n;
+            }
+        }else{
+            if(n==0){
+                k= k-1;
+                n = n+1;
+                a = k+"/"+n;
+            }
+            else if(n<k){
+                k = k+1-n;
+                a = n+"/"+k;
+            }
+        }
+
+
+
+        System.out.println(a);
 
     }
 }
+
