@@ -11,12 +11,19 @@ public class FindAlphabet {
         char [] alll = all.toCharArray();
         int[] alphabet = new int[26];
         Arrays.fill(alphabet,-1);
+
         for(int i =0; i<alll.length; i++){
             int n = all.indexOf(alll[i]);
-
+            int t = (int)alll[i]-97;
+            if(alphabet[t] == -1) {
+                alphabet[t] = n;
+            }
         }
 
-        System.out.println(Arrays.toString(alll));
+        for(int i=0; i<alphabet.length; i++) {
+
+            System.out.print(alphabet[i]+ " ");
+        }
 
     }
 }
